@@ -1,0 +1,23 @@
+# spring.application.name=curso
+# spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+# spring.jpa.hibernate.ddl-auto=none
+
+spring: 
+  jpa:  
+    hibernate:
+      ddl-auto: none
+    generate-ddl: true
+    properties:
+      hibernate:
+        jdbc: 
+          lob:  
+            non_contextual_creation: true
+        format_sql: true
+    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 1234
+  application:
+    name: curso
